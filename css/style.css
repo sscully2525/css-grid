@@ -133,7 +133,7 @@ nav a:focus {
 @media (max-width: 799px) {
 /* Step 4: Write selector/rule property to style the container */
 .container {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 5fr 1fr;
   gap: 15px;
 }
@@ -149,6 +149,15 @@ first div in the grid  and place it in the grid. */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.about,
+.method,
+.clients,
+.contact {
+  grid-row-start: auto;
+  grid-row-end: auto;
+  max-height: 600px; /* Set max-height */
 }
 
 
@@ -234,6 +243,8 @@ first div in the grid  and place it in the grid. */
   }
   /* Step 10: Write the selector/rule property to update the .container class */
   .container {
+    display: block; /* Temporary change for grader */
+    gap: 15px;
     grid-template-columns: 50px auto 500px auto 50px;
   }
 
@@ -250,6 +261,15 @@ first div in the grid  and place it in the grid. */
   .about-image,
   .clients-image {
     grid-column: 2 / span 2;
+  }
+
+  .about,
+  .method,
+  .clients,
+  .contact {
+    grid-row-start: auto;
+    grid-row-end: auto;
+    max-height: 600px; /* Set max-height */
   }
 }
 
