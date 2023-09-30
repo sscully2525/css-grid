@@ -12,7 +12,7 @@ body{
 
 
 .overview{
-  background-attachment: fixed; /* Parallax effect */     
+  background-attachment: fixed; /* Parallax effect */
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
@@ -113,14 +113,14 @@ nav a:focus {
 }
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-.skip a {
+#skip {
   position: absolute;
   top: -40px;
 }
 
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-.skip a:focus {
+#skip:focus {
   top: 20px;
 }
 
@@ -205,7 +205,6 @@ first div in the grid  and place it in the grid. */
   place-items: center; /* Centers content horizontally and vertically */
   max-height: 250px;   /* Sets a maximum height */
   overflow: scroll;    /* Makes overflow content scrollable */
-  text-align: center;  /* Centers the text */
 }
 
 
@@ -216,7 +215,7 @@ first div in the grid  and place it in the grid. */
 @media screen and (min-width: 800px) {
 
   /* Step 9: Write the selector/rule property to style the nav element */
-  nav ul {
+  nav {
     text-align: right;
     padding: 30px 0;
   }
@@ -224,7 +223,6 @@ first div in the grid  and place it in the grid. */
   .container {
     display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
-    
   }
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
@@ -241,12 +239,7 @@ first div in the grid  and place it in the grid. */
     grid-column: 2 / span 2;
   }
 
-  .method-image,
-  .contact-image,
-  .about-image,
-  .clients-image {
-    width: 100%;
-  }
+
 
 }
 
